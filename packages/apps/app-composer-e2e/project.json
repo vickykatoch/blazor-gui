@@ -1,0 +1,30 @@
+{
+  "name": "app-composer-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "packages/apps/app-composer-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "packages/apps/app-composer-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "app-composer:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "app-composer:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "app-composer:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "implicitDependencies": ["app-composer"],
+  "tags": []
+}
