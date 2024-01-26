@@ -18,10 +18,9 @@ export interface ThemeProps extends ThemeContextState {
   children: React.ReactNode;
 }
 
-const ThemeContext = createContext<ThemeProps>({
+const ThemeContext = createContext<ThemeContextState>({
   theme: defaultTheme,
   density: 'comfortable',
-  children: null,
 });
 
 export const ThemeProvider: FC<ThemeProps> = ({ children, theme, density }) => {
