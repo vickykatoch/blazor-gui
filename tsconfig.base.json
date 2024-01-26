@@ -15,7 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@avam/convenience": ["packages/libs/convenience/src/index.ts"]
+      "@avam/amps-console": ["packages/widgets/amps-console/src/index.ts"],
+      "@avam/bookmarks": ["packages/widgets/bookmarks/src/index.ts"],
+      "@avam/convenience": ["packages/libs/convenience/src/index.ts"],
+      "@avam/core-types": ["packages/libs/core-types/src/index.ts"],
+      "@avam/ui-core": ["packages/libs/ui-core/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

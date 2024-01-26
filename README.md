@@ -69,3 +69,5 @@ yarn nx generate @nx/workspace:remove --projectName=app-composer --no-interactiv
 yarn nx g @nx/js:library --name=convenience --unitTestRunner=jest --directory=packages/libs/convenience --importPath=@avam/convenience --publishable=true --minimal=true --pascalCaseFiles=true --projectNameAndRootFormat=as-provided --dryRun
 
 yarn nx generate @nx/workspace:remove --projectName=convenience --no-interactive
+
+yarn nx g @nx/react:library --name=amps-console --directory=widgets --appProject=app-composer --compiler=swc --importPath=@avam/amps-console --projectNameAndRootFormat=derived

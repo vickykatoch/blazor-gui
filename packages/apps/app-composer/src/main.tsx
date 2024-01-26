@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { SaltProvider } from '@salt-ds/core';
+import '@salt-ds/theme/index.css';
 
 import App from './app/App';
 
@@ -9,8 +10,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <BrowserRouter>
+    <SaltProvider mode="light" applyClassesTo="root" density="high">
       <App />
-    </BrowserRouter>
+    </SaltProvider>
   </StrictMode>
 );
