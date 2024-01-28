@@ -71,3 +71,5 @@ yarn nx g @nx/js:library --name=convenience --unitTestRunner=jest --directory=pa
 yarn nx generate @nx/workspace:remove --projectName=convenience --no-interactive
 
 yarn nx g @nx/react:library --name=amps-console --directory=widgets --appProject=app-composer --compiler=swc --importPath=@avam/amps-console --projectNameAndRootFormat=derived
+
+yarn nx g @nx/js:library --name=amps-api --unitTestRunner=jest --directory=packages/libs/amps-api --importPath=@avam/amps-api --publishable=true --minimal=true --pascalCaseFiles=true --projectNameAndRootFormat=as-provided --dryRun

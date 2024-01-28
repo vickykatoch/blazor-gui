@@ -16,6 +16,7 @@
     "@salt-ds/theme": "^1.11.0",
     "@swc/helpers": "~0.5.2",
     "amps": "^5.3.3-1.341463.3178107",
+    "bootstrap": "^5.3.2",
     "flexlayout-react": "^0.7.15",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -1,12 +1,16 @@
-export interface AmpsConfig {
+import { AmpsConnectionInfo } from '@avam/amps-api';
+
+export interface AmpsTopic {
+  type: 'json' | 'nvfix' | 'xml' | 'fix' | 'bson' | 'msgpack';
   name: string;
-  url: string;
-  topic: string;
+}
+export interface AmpsQueryConfig {
+  name: string;
+  connection: AmpsConnectionInfo;
+  topic: AmpsTopic;
   options?: string;
   viewport?: DataViewportSettings;
   sort?: string;
-  token?: string;
-  user?: string;
 }
 export interface DataViewportSettings {
   batchSize: number;
@@ -14,10 +18,20 @@ export interface DataViewportSettings {
 
 export interface AmpsConsoleState {
   busy?: boolean;
-  ampsConfigs: AmpsConfig[];
-  selectedConfig?: AmpsConfig;
+  ampsConfigs: AmpsConnectionInfo[];
+  selectedConfig?: AmpsConnectionInfo;
 }
 
 export enum AmpsConsoleAction {
   Update = 'update',
+}
+
+export interface Query {
+  name: string;
+  topic: string;
+  options?: string;
+  viewport?: DataViewportSettings;
+  sort?: string;
+  token?: string;
+  user?: string;
 }

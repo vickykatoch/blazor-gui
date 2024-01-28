@@ -1,33 +1,19 @@
-import { FC, createContext, useState } from 'react';
+import { FC, useState } from 'react';
+import { ThemeContext, ThemeState } from './theme-context';
+import { defaultTheme } from './types';
 
-export type Theme = 'dark' | 'light';
-export type Density =
-  | 'mini'
-  | 'micro'
-  | 'compact'
-  | 'comfortable'
-  | 'cozy'
-  | 'spacious';
-export const defaultTheme: Theme = 'dark';
-interface ThemeContextState {
-  theme: Theme;
-  density?: Density;
-}
-
-export interface ThemeProps extends ThemeContextState {
+export interface ThemeProps extends ThemeState {
   children: React.ReactNode;
 }
 
-const ThemeContext = createContext<ThemeContextState>({
-  theme: defaultTheme,
-  density: 'comfortable',
-});
-
 export const ThemeProvider: FC<ThemeProps> = ({ children, theme, density }) => {
-  const [themeState, setThemeState] = useState<Theme>(theme);
+  const [themeState, setTheme] = useState<ThemeState>({
+    theme: theme || defaultTheme,
+    density: density || 'high',
+  });
 
   return (
-    <ThemeContext.Provider value={{ theme: themeState, density }}>
+    <ThemeContext.Provider value={{ ...themeState, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );

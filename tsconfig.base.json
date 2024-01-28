@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@avam/amps-api": ["packages/libs/amps-api/src/index.ts"],
       "@avam/amps-console": ["packages/widgets/amps-console/src/index.ts"],
       "@avam/bookmarks": ["packages/widgets/bookmarks/src/index.ts"],
       "@avam/convenience": ["packages/libs/convenience/src/index.ts"],

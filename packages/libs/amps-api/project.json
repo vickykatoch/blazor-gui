@@ -1,0 +1,37 @@
+{
+  "name": "amps-api",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/libs/amps-api/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/libs/amps-api",
+        "main": "packages/libs/amps-api/src/index.ts",
+        "tsConfig": "packages/libs/amps-api/tsconfig.lib.json",
+        "assets": [],
+        "project": "packages/libs/amps-api/package.json",
+        "compiler": "swc",
+        "format": ["cjs", "esm"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs amps-api {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/libs/amps-api/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
