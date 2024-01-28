@@ -13,6 +13,7 @@ const queryConfig: AmpsQueryConfig = {
     name: 'test',
     url: 'ws://localhost:9007/amps/json',
   },
+  method: 'sow_and_subscribe',
   topic: {
     type: 'json',
     name: '/test/unit-test',
@@ -25,8 +26,9 @@ const AmpsConsole: FC<Props | undefined> = (props?: Props): ReactElement => {
       <QueryBuilder
         onExec={() => {}}
         onReset={() => {}}
-        qureryConfig={queryConfig}
+        queryConfig={queryConfig}
       />
+      <div className="d-flex flex-grow-1 flex-column"></div>
     </div>
   );
 };

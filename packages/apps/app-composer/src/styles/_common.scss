@@ -1,0 +1,18 @@
+body {
+  margin: 0.2em;
+  padding: 0;
+  height: calc(100vh - 0.4em);
+  width: calc(100vw - 0.4em);
+  font-size: 14px;
+  background-color: var(--ac-body-bg);
+  color: var(--ac-body-fg);
+  border: 1px solid var(--ac-border-color);
+  border-radius: 0.2em;
+}
+.fill {
+  height: 100%;
+  width: 100%;
+}
+.panel {
+  background-color: var(--ac-panel-bg);
+}

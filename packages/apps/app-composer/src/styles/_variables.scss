@@ -1,0 +1,12 @@
+.salt-theme[data-mode='dark'] {
+  --ac-body-bg: #000;
+  --ac-body-fg: #fff;
+  --ac-panel-bg: #212529;
+  --ac-border-color: #707274;
+}
+.salt-theme[data-mode='light'] {
+  --ac-body-bg: #fff;
+  --ac-body-fg: #000;
+  --ac-panel-bg: #d8dde1;
+  --ac-border-color: #cbcccf;
+}
