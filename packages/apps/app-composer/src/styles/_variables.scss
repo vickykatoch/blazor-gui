@@ -1,6 +1,7 @@
 .salt-theme[data-mode='dark'] {
   --ac-body-bg: var(--salt-color-black);
-  --ac-body-fg: var(--salt-color-white);
+  // --ac-body-fg: var(--salt-color-white);
+  --ac-body-fg: var(--salt-content-secondary-foreground);
   --ac-panel-bg: #212529;
   --ac-panel2-bg: var(--salt-color-gray-700);
   --ac-border-color: #707274;

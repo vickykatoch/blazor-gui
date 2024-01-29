@@ -1,10 +1,6 @@
 import { FC } from 'react';
 
-import {
-  AMPS_QUERY_METHODS,
-  AMPS_TOPIC_TYPES,
-  AmpsQueryConfig,
-} from '../common';
+import { AMPS_QUERY_METHODS, AmpsQueryConfig } from '../common';
 import { Button, FormField, FormFieldLabel, Input } from '@salt-ds/core';
 import { AmpsServerSearch } from './amps-server-search';
 import { DoubleChevronUpIcon } from '@salt-ds/icons';
