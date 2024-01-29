@@ -5,7 +5,7 @@ export function withThemeProvider<T>(
   Component: ComponentType<JSX.IntrinsicAttributes & T>
 ) {
   return (props: JSX.IntrinsicAttributes & T) => {
-    const [theme] = useState<Theme>('dark');
+    const [theme] = useState<Theme>('light');
 
     return (
       <ThemeProvider theme={theme} density="compact">
