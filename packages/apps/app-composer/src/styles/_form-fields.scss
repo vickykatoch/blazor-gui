@@ -1,5 +1,35 @@
-.form-field-label-horiz {
-  width: unset !important;
+.saltFormField {
   display: inline-flex;
-  margin-right: 1em;
+  margin-bottom: 0.5em;
+  font-size: 14px !important;
+
+  .form-field-label-horiz {
+    flex-shrink: 0;
+    align-self: center;
+  }
+
+  .saltInput {
+    --input-borderColor: var(--ac-border-color);
+    --input-borderColor: unset;
+    border: 1px solid var(--ac-border-color);
+    border-radius: 0.2em;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    outline: none;
+    &:focus-within {
+      border-color: var(--ac-primary-color);
+      box-shadow: 0 0 0 0.2rem rgba(2, 83, 246, 0.25);
+    }
+  }
+  &:focus-within {
+    .form-field-label-horiz {
+      color: blue;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+select {
+  border-color: var(--ac-border-color);
+  border-radius: 0.3em;
 }

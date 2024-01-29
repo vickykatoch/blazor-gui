@@ -9,7 +9,7 @@ export function App(): ReactElement {
   const { theme } = useTheme();
 
   return (
-    <SaltProvider mode={theme as Mode} applyClassesTo="root" density="high">
+    <SaltProvider mode={theme as Mode} applyClassesTo="root" density="medium">
       <RouterProvider router={router} />
     </SaltProvider>
   );

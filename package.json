@@ -13,6 +13,7 @@
   "dependencies": {
     "@salt-ds/core": "^1.14.0",
     "@salt-ds/icons": "^1.9.1",
+    "@salt-ds/lab": "^1.0.0-alpha.28",
     "@salt-ds/theme": "^1.11.0",
     "@swc/helpers": "~0.5.2",
     "amps": "^5.3.3-1.341463.3178107",
