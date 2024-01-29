@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useCallback, useState } from 'react';
 
 import { AMPS_QUERY_METHODS, AmpsQueryConfig } from '../common';
 import { Button, FormField, FormFieldLabel, Input } from '@salt-ds/core';
@@ -18,7 +18,13 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
   onExec,
   onReset,
 }) => {
-  // const [viewState, setViewState] = useState(qureryConfig);
+  const [viewState, setViewState] = useState(queryConfig);
+  const updateState = useCallback(
+    (state: Record<string, string | number>) => {
+      setViewState((prevState) => ({ ...prevState, ...state }));
+    },
+    [setViewState]
+  );
   // const [expanded, setExpanded] = useState(true);
 
   return (
@@ -29,7 +35,7 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
           <DoubleChevronUpIcon />
         </div>
       </div>
-      <div className="d-flex flex-shrink-0 flex-column m-2 p-2 bdr panel-2">
+      <div className="d-flex flex-shrink-0 flex-column bdr panel-2">
         <div className="d-flex flex-shrink-0 mb-2">
           <div className="d-flex flex-grow-1 align-items-center me-4">
             <FormField>
@@ -46,7 +52,7 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
                   </option>
                 ))}
               </select>
-              <AmpsServerSearch connectionInfo={queryConfig.connection} />
+              <AmpsServerSearch connectionInfo={viewState.connection} />
             </FormField>
           </div>
 
@@ -61,7 +67,10 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
 
               <Input
                 style={{ width: DEFAULT_LABEL_WIDTH }}
-                value={queryConfig.limit}
+                value={viewState.limit}
+                onChange={({ target }) =>
+                  updateState({ limit: (target as HTMLInputElement).value })
+                }
               />
             </FormField>
           </div>
@@ -69,7 +78,7 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
         <div className="d-flex flex-shrink-0 mb-2">
           <AmpsTopicSearch
             labelWidth={DEFAULT_LABEL_WIDTH}
-            topic={queryConfig.topic}
+            topic={viewState.topic}
           />
         </div>
 
@@ -98,7 +107,12 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
           >
             Order By
           </FormFieldLabel>
-          <Input />
+          <Input
+            value={viewState.sort}
+            onChange={({ target }) =>
+              updateState({ sort: (target as HTMLInputElement).value })
+            }
+          />
         </FormField>
 
         <div className="flex-shrink-0 d-flex justify-content-end mt-3 bdr-t pt-2">
@@ -113,6 +127,10 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
               <Input
                 style={{ width: 300 }}
                 endAdornment={<Button>Save</Button>}
+                value={viewState.name}
+                onChange={({ target }) =>
+                  updateState({ sort: (target as HTMLInputElement).value })
+                }
               />
             </FormField>
           </div>
