@@ -1,14 +1,14 @@
 import { FC } from 'react';
 
-import { AMPS_QUERY_METHODS, AmpsQueryConfig } from '../common';
 import {
-  Button,
-  FormField,
-  FormFieldLabel,
-  Input,
-  RadioButton,
-  RadioButtonGroup,
-} from '@salt-ds/core';
+  AMPS_QUERY_METHODS,
+  AMPS_TOPIC_TYPES,
+  AmpsQueryConfig,
+} from '../common';
+import { Button, FormField, FormFieldLabel, Input } from '@salt-ds/core';
+import { AmpsServerSearch } from './amps-server-search';
+import { DoubleChevronUpIcon } from '@salt-ds/icons';
+import { AmpsTopicSearch } from './amps-topic-search';
 
 const DEFAULT_LABEL_WIDTH = 60;
 interface QueryBuilderProps {
@@ -29,7 +29,9 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
     <div className="d-flex flex-column">
       <div className="d-flex flex-shrink-0 p-2 panel">
         <div className="flex-grow-1">Query Builder</div>
-        <div className="flex-shrink-0">Toggle</div>
+        <div className="flex-shrink-0">
+          <DoubleChevronUpIcon />
+        </div>
       </div>
       <div className="d-flex flex-shrink-0 flex-column m-2 p-2 bdr panel-2">
         <div className="d-flex flex-shrink-0 mb-2">
@@ -48,7 +50,7 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
                   </option>
                 ))}
               </select>
-              <Input endAdornment={<Button>...</Button>} />
+              <AmpsServerSearch connectionInfo={queryConfig.connection} />
             </FormField>
           </div>
 
@@ -66,19 +68,12 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
           </div>
         </div>
         <div className="d-flex flex-shrink-0 mb-2">
-          <FormField>
-            <FormFieldLabel
-              className="form-field-label-horiz"
-              style={{ width: DEFAULT_LABEL_WIDTH }}
-            >
-              Topic
-            </FormFieldLabel>
-            <select
-              style={{ width: DEFAULT_LABEL_WIDTH, marginRight: 1 }}
-            ></select>
-            <Input />
-          </FormField>
+          <AmpsTopicSearch
+            labelWidth={DEFAULT_LABEL_WIDTH}
+            topic={queryConfig.topic}
+          />
         </div>
+
         <FormField>
           <FormFieldLabel
             className="form-field-label-horiz"
