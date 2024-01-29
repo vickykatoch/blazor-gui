@@ -18,6 +18,7 @@ const queryConfig: AmpsQueryConfig = {
     type: 'json',
     name: '/test/unit-test',
   },
+  limit: 10,
 };
 
 const AmpsConsole: FC<Props | undefined> = (props?: Props): ReactElement => {

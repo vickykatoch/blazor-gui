@@ -63,7 +63,10 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
                 Limit
               </FormFieldLabel>
 
-              <Input style={{ width: DEFAULT_LABEL_WIDTH }} />
+              <Input
+                style={{ width: DEFAULT_LABEL_WIDTH }}
+                value={queryConfig.limit}
+              />
             </FormField>
           </div>
         </div>

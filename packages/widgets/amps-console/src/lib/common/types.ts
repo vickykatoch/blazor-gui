@@ -12,6 +12,7 @@ export interface AmpsQueryConfig {
   options?: string;
   viewport?: DataViewportSettings;
   sort?: string;
+  limit: number;
 }
 export interface DataViewportSettings {
   batchSize: number;
