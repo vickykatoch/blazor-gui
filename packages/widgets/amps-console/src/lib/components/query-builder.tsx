@@ -122,7 +122,7 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
                 className="form-field-label-horiz"
                 style={{ width: DEFAULT_LABEL_WIDTH }}
               >
-                Name
+                Query Name
               </FormFieldLabel>
               <Input
                 style={{ width: 300 }}

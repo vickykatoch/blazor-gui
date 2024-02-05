@@ -45,9 +45,11 @@ export const EditNewAmpsServerInfo: FC<Props> = ({ connectionInfo }) => {
           style={{ width: DEFAULT_LABEL_WIDTH }}
           className="form-field-label-horiz"
         >
-          Retry delay
+          Connection Timeout
         </FormFieldLabel>
-        <Input />
+        <Tooltip content="Validation Failure" status="error">
+          <Input validationStatus="error" title="Validate failure" />
+        </Tooltip>
       </FormField>
 
       <FormField>
@@ -55,11 +57,9 @@ export const EditNewAmpsServerInfo: FC<Props> = ({ connectionInfo }) => {
           style={{ width: DEFAULT_LABEL_WIDTH }}
           className="form-field-label-horiz"
         >
-          Connection Timeout
+          Reconnect Attempts
         </FormFieldLabel>
-        <Tooltip content="Validation Failure" status="error">
-          <Input validationStatus="error" title="Validate failure" />
-        </Tooltip>
+        <Input />
       </FormField>
     </div>
   );
