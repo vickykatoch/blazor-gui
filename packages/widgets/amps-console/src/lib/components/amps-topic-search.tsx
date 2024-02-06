@@ -1,5 +1,4 @@
 import { FC } from 'react';
-
 import { FormField, FormFieldLabel, Input } from '@salt-ds/core';
 import { AMPS_TOPIC_TYPES, AmpsTopic } from '../common';
 

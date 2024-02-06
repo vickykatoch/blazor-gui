@@ -33,5 +33,8 @@ select {
   border-color: var(--ac-border-color);
   border-radius: 0.3em;
   color: var(--ac-body-fg);
-  background: none;
+  background: var(--ac-input-control-bg);
+}
+textarea {
+  width: 100%;
 }

@@ -6,10 +6,12 @@
   --ac-panel-bg: #212529;
   --ac-panel2-bg: var(--salt-color-gray-700);
   --ac-border-color: #707274;
+  --ac-input-control-bg: none;
 }
 .salt-theme[data-mode='light'] {
   --ac-body-bg: var(--salt-color-white);
   --ac-panel-bg: #d8dde1;
   --ac-border-color: #cbcccf;
   --ac-panel2-bg: var(--salt-color-gray-20);
+  --ac-input-control-bg: var(--salt-color-white);
 }

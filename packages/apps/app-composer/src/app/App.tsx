@@ -10,7 +10,9 @@ export function App(): ReactElement {
 
   return (
     <SaltProvider mode={theme as Mode} applyClassesTo="root" density="medium">
-      <RouterProvider router={router} />
+      <div className="d-flex flex-grow-1 flex-column pos-rel">
+        <RouterProvider router={router} />
+      </div>
     </SaltProvider>
   );
 }
