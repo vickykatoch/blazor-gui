@@ -4,4 +4,5 @@ export interface AmpsConnectionInfo {
   token?: string | (() => string);
   connectionTimeout?: number;
   reconnectAttempts?: number;
+  keepAlive?: boolean;
 }

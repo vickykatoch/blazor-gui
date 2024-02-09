@@ -6,6 +6,7 @@ import { AmpsServerHost } from './amps-server-host';
 
 interface Props {
   connectionInfo?: AmpsConnectionInfo;
+  enableMutation?: boolean;
 }
 export const AmpsServerSearch: FC<Props> = ({ connectionInfo }) => {
   const [show, setShow] = useState<boolean>(false);
@@ -16,11 +17,7 @@ export const AmpsServerSearch: FC<Props> = ({ connectionInfo }) => {
         endAdornment={<Button onClick={() => setShow(true)}>...</Button>}
       />
       {show && (
-        <Dialog
-          title="Amps Servers"
-          onCancel={() => setShow(false)}
-          onOk={() => setShow(false)}
-        >
+        <Dialog title="Amps Servers" height={325} width={500}>
           <AmpsServerHost />
         </Dialog>
       )}

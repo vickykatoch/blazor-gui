@@ -1,7 +1,13 @@
 import { FC, useCallback, useState } from 'react';
 
 import { AMPS_QUERY_METHODS, AmpsQueryConfig } from '../common';
-import { Button, FormField, FormFieldLabel, Input } from '@salt-ds/core';
+import {
+  Button,
+  FlexLayout,
+  FormField,
+  FormFieldLabel,
+  Input,
+} from '@salt-ds/core';
 import { AmpsServerSearch } from './amps-server-search';
 import { DoubleChevronUpIcon } from '@salt-ds/icons';
 import { AmpsTopicSearch } from './amps-topic-search';
@@ -28,17 +34,15 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
   // const [expanded, setExpanded] = useState(true);
 
   return (
-    <div className="d-flex flex-column">
+    <FlexLayout direction="column" gap={1}>
       <div className="d-flex flex-shrink-0 p-2 panel">
         <div className="flex-grow-1">Query Builder</div>
-        <div className="flex-shrink-0">
-          <DoubleChevronUpIcon />
-        </div>
+        <DoubleChevronUpIcon className="flex-shrink-0" />
       </div>
       <div className="d-flex flex-shrink-0 flex-column bdr panel-2">
         <div className="d-flex flex-shrink-0 mb-2">
           <div className="d-flex flex-grow-1 align-items-center me-4">
-            <FormField>
+            <FormField labelPlacement="left">
               <FormFieldLabel
                 className="form-field-label-horiz"
                 style={{ width: DEFAULT_LABEL_WIDTH }}
@@ -140,6 +144,6 @@ export const QueryBuilder: FC<QueryBuilderProps> = ({
           <Button onClick={onReset}>Reset</Button>
         </div>
       </div>
-    </div>
+    </FlexLayout>
   );
 };

@@ -1,5 +1,4 @@
 import { FC, ReactElement } from 'react';
-import styles from './AmpsConsole.module.scss';
 import { withContextProvider } from './context';
 import { QueryBuilder } from './components';
 import { AmpsQueryConfig } from './common';
