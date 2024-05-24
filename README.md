@@ -76,6 +76,11 @@ yarn nx g @nx/js:library --name=amps-api --unitTestRunner=jest --directory=packa
 
 If VSCode opens different directory in integrated terminal, then set this
 
+function linkify(text) {
+    const urlPattern = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    return text.replace(urlPattern, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+  }
+
 "terminal.integrated.env.linux": {
 "PRE_NAMESPACE_PWD": "${cwd}"
 }
