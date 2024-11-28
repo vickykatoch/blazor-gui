@@ -18,7 +18,7 @@
 "@avam/blazor-gui@file:.":
   version "0.0.0"
   dependencies:
-    "@avam/blazor-gui" "file:C:/Users/vicky/AppData/Local/Yarn/Cache/v6/npm-@avam-blazor-gui-0.0.0-4aa95bce-3bf3-430f-85d2-2a6aa5dd7d53-1732810820397/node_modules/@avam/blazor-gui"
+    "@avam/blazor-gui" "file:C:/Users/vicky/AppData/Local/Yarn/Cache/v6/npm-@avam-blazor-gui-0.0.0-ee3b5c5c-b601-4aed-a7a9-b47a45e4b0cd-1732811170017/node_modules/@avam/blazor-gui"
     "@salt-ds/core" "^1.14.0"
     "@salt-ds/icons" "^1.9.1"
     "@salt-ds/lab" "^1.0.0-alpha.28"
@@ -5912,6 +5912,11 @@ flatted@^3.2.7, flatted@^3.2.9:
   version "3.2.9"
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.9.tgz"
   integrity sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==
+
+flexlayout-react@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/flexlayout-react/-/flexlayout-react-0.8.1.tgz#9ea310fdf8326f6af2c13ace61b166471d937d3e"
+  integrity sha512-zNB++3bnx1XGjslpJyaDvVYkgjXNZyeHAabBvZp0REha9skljtxJYApOR9XazlFCKloqLF8Uk8ado3LsNW/rPg==
 
 flexlayout-react@^0.7.15:
   version "0.7.15"

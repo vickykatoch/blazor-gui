@@ -6,13 +6,13 @@ export const router = createBrowserRouter([
     path: '/',
     element: <Layout />,
   },
-  {
-    path: '/bookmarks',
-    async lazy() {
-      const module = await import('@avam/bookmarks');
-      return { Component: module.default };
-    },
-  },
+  // {
+  //   path: '/bookmarks',
+  //   async lazy() {
+  //     const module = await import('@avam/bookmarks');
+  //     return { Component: module.default };
+  //   },
+  // },
   {
     path: '/amps',
     async lazy() {

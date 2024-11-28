@@ -1,6 +1,6 @@
 import { Label } from '@salt-ds/core';
 import styles from './widgets-bookmarks.module.scss';
-import { calculateTintAndShade } from './Color';
+// import { calculateTintAndShade } from './Color';
 import { useState } from 'react';
 
 /* eslint-disable-next-line */
@@ -15,12 +15,12 @@ export function WidgetsBookmarks() {
 
   const generate = () => {
     // #f04f4f
-    const colors = [];
-    for (let i = 1; i <= 12; i++) {
-      colors.push(calculateTintAndShade(color, i * 9 * 0.01));
-    }
-    setContrast(colors);
-    setColors([...colors].reverse());
+    // const colors = [];
+    // for (let i = 1; i <= 12; i++) {
+    //   colors.push(calculateTintAndShade(color, i * 9 * 0.01));
+    // }
+    // setContrast(colors);
+    // setColors([...colors].reverse());
   };
   return (
     <div className="d-flex flex-column flex-grow-1 p-1">
