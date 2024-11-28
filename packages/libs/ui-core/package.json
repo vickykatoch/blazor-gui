@@ -1,4 +1,7 @@
 {
   "name": "@avam/ui-core",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "dependencies": {
+    "@avam/ui-core": "file:"
+  }
 }

@@ -1,4 +1,7 @@
 {
   "name": "@avam/common-components",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "dependencies": {
+    "@avam/common-components": "file:"
+  }
 }

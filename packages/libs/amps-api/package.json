@@ -1,7 +1,9 @@
 {
   "name": "@avam/amps-api",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "@avam/amps-api": "file:"
+  },
   "type": "commonjs",
   "main": "./index.cjs",
   "module": "./index.js"

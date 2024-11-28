@@ -1,7 +1,9 @@
 {
   "name": "@avam/convenience",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "@avam/convenience": "file:"
+  },
   "type": "commonjs",
   "main": "./index.cjs",
   "module": "./index.js"

@@ -2,6 +2,7 @@
   "name": "@avam/core-types",
   "version": "0.0.1",
   "dependencies": {
+    "@avam/core-types": "file:",
     "tslib": "^2.3.0"
   },
   "type": "commonjs",
