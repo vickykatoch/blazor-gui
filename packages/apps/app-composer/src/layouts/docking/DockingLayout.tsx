@@ -1,37 +1,23 @@
 import { FC, useRef } from 'react';
-import { Action, Layout, Model, TabNode } from 'flexlayout-react';
+import { Layout, TabNode } from 'flexlayout-react';
 import { HeaderPanel } from './HeaderPanel';
-import { DefaultLayout } from './helpers';
-import { ContentPanel } from './ContentPanel';
 import 'flexlayout-react/style/dark.css';
 import { DockingManager } from './DockingManager';
-import { GridPanel } from './GridPanel';
 import { EmptyViewPanel } from './EmptyView';
 import { DockView } from './DockView';
-import { routes } from '../../routes';
+import { LayoutProps } from '../types';
 
-interface Props {
-  children: React.ReactNode;
-}
-export const DockingLayout: FC<Props> = ({ children }) => {
+export const DockingLayout: FC<LayoutProps> = ({ routeProvider }) => {
   const dockingManager = useRef<DockingManager>(new DockingManager());
 
   const factory = (node: TabNode) => {
     const component = node.getComponent();
-    if (component === 'panel') {
-      return <ContentPanel name={node.getName()} />;
-    } else if (component === 'grid') {
-      return <GridPanel name={node.getName()} />;
-    } else if (component === 'dockview') {
-      return (
-        <DockView
-          route={'@avam/amps-console'}
-          node={node}
-          loader={routes[0].loader}
-        />
-      );
+    const route = routeProvider.getWidgetRoute(component!);
+    if (!route) {
+      return <EmptyViewPanel name={component!} />;
     }
-    return <EmptyViewPanel name={'@avam/amps-console'} />;
+    const [id, name] = [node.getId(), node.getName()];
+    return <DockView route={route} node={{ id, name }} />;
   };
 
   return (

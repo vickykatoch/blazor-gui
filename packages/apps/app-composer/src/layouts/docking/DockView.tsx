@@ -1,17 +1,21 @@
+import { IWidgetRoute } from '@avam/core-types';
 import { TabNode } from 'flexlayout-react';
-import { FC, lazy, Suspense, useEffect, useState } from 'react';
+import { FC, lazy, Suspense } from 'react';
 
 interface Props {
-  loader: (name?: string) => Promise<{ default: FC }>;
-  route: string;
-  node: TabNode;
+  route: IWidgetRoute;
+  node: {
+    id: string;
+    name: string;
+  };
 }
 
-export const DockView: FC<Props> = ({ route, loader }) => {
-  const LazyComp = lazy(loader);
+export const DockView: FC<Props> = ({ route, node }) => {
+  const LazyComp = lazy(route.factory);
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <LazyComp />
+      <LazyComp {...node} />
     </Suspense>
   );
 };

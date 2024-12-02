@@ -1,4 +1,3 @@
-import { ReactElement } from 'react';
 import { TabLayout } from './TabbedLayout';
 import { LayoutType } from './types';
 import { DockingLayout } from './docking/DockingLayout';

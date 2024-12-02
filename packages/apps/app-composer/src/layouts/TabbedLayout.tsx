@@ -1,8 +1,6 @@
 import { FC } from 'react';
+import { LayoutProps } from './types';
 
-interface Props {
-  children: React.ReactNode;
-}
-export const TabLayout: FC<Props> = () => {
+export const TabLayout: FC<LayoutProps> = ({ routeProvider }) => {
   return <h1>Tab Layout</h1>;
 };

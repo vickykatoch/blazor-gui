@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Sample AMPS configuration
+
+     This minimal sample file defines an AMPS instance that provides
+     publish and subscribe, topic filtering, and content filtering for
+     messages.  The instance provides messaging services on port 9007
+     of the server.  This configuration also provides an administrative
+     interface on port 8085, and logs serious messages (error and higher
+     severity) to stdout.
+
+     This sample file does not configure State of the World (SOW) Topics,
+     Transaction Logs, Queues, Aggregation and Views, Historical SOW Query,
+     Replication, Authentication and Entitlement, Conflated Topics,
+     or other features of AMPS.
+
+     More details for the features available and how to configure them are
+     provided in the AMPS User Guide and the AMPS Configuration Reference.
+     Both are available at http://crankuptheamps.com/documentation/
+
+     -->
+
+<AMPSConfig>
+
+    <!-- Name of the AMPS instance.
+
+       This is used to identify this instance and must be unique
+       among a set of replicated instances.
+
+       -->
+
+    <Name>AMPS-Sample</Name>
+
+    <MessageTypes>
+        <MessageType>
+            <Name>composite-json-binary</Name>
+            <Module>composite-local</Module>
+            <MessageType>json</MessageType>
+            <MessageType>binary</MessageType>
+        </MessageType>
+    </MessageTypes>
+
+    <!-- Configure a transport that accepts any known message type over
+       TCP port 9007 using the amps protocol, and a transport that
+       accepts any known message type over a webocket connection
+       to port 9008. -->
+
+    <Transports>
+        <Transport>
+            <Name>any-tcp</Name>
+            <Type>tcp</Type>
+            <InetAddr>9007</InetAddr>
+            <Protocol>amps</Protocol>
+        </Transport>
+        <Transport>
+            <Name>WebSocketTransport</Name>
+            <Type>tcp</Type>
+            <InetAddr>9008</InetAddr>
+            <Protocol>websocket</Protocol>
+        </Transport>
+    </Transports>
+
+    <!-- Configure the administrative HTTP server on port 8085
+
+       This HTTP server provides Galvanometer, admin functions
+       and statistics for the instance.
+
+       A production configuration would add a FileName to
+       persist statistics.
+       -->
+
+    <Admin>
+        <InetAddr>localhost:8085</InetAddr>
+        <!-- Configure galvanometer to use the any-ws transport for
+         queries and subscriptions.
+         -->
+        <SQLTransport>WebSocketTransport</SQLTransport>
+    </Admin>
+
+
+    <!-- Log messages of severity 'error' and higher to stdout.
+      Also include 00-0015 (an 'info' level message) to indicate
+      successful startup. -->
+
+    <Logging>
+        <Target>
+            <Protocol>stdout</Protocol>
+            <Level>error</Level>
+            <IncludeErrors>00-0015</IncludeErrors>
+        </Target>
+        <Target>
+            <Protocol>file</Protocol>
+            <FileName>./logs/%Y%m%d%H%M%S-%n.log</FileName>
+            <RotationThreshold>200MB</RotationThreshold>
+            <Level>trace</Level>
+        </Target>
+    </Logging>
+    <SOW>
+        <Topic>
+            <FileName>./sow/%n.sow</FileName>
+            <Name>/sample/perf-matrix</Name>
+            <MessageType>json</MessageType>
+            <Key>/instanceName</Key>
+            <Key>/publishTs</Key>
+        </Topic>
+    </SOW>
+</AMPSConfig>

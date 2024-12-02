@@ -1,3 +1,8 @@
+# Git
+
+git checkout -b feature/xyz
+git push --set-upstream origin feature/xyz
+
 # BlazorGui
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
@@ -77,10 +82,12 @@ yarn nx g @nx/js:library --name=amps-api --unitTestRunner=jest --directory=packa
 If VSCode opens different directory in integrated terminal, then set this
 
 function linkify(text) {
-    const urlPattern = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-    return text.replace(urlPattern, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
-  }
+const urlPattern = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]\*[-A-Z0-9+&@#\/%=~_|])/ig;
+return text.replace(urlPattern, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+}
 
 "terminal.integrated.env.linux": {
 "PRE_NAMESPACE_PWD": "${cwd}"
 }
+
+yarn nx g @nx/react:library --name=clarity-dash --directory=widgets --appProject=app-composer --compiler=swc --importPath=@avam/clarity-dash --projectNameAndRootFormat=derived --dryrun

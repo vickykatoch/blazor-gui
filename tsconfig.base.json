@@ -18,6 +18,7 @@
       "@avam/amps-api": ["packages/libs/amps-api/src/index.ts"],
       "@avam/amps-console": ["packages/widgets/amps-console/src/index.ts"],
       "@avam/bookmarks": ["packages/widgets/bookmarks/src/index.ts"],
+      "@avam/clarity-dash": ["packages/widgets/clarity-dash/src/index.ts"],
       "@avam/common-components": [
         "packages/libs/common-components/src/index.ts"
       ],

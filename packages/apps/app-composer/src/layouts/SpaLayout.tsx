@@ -1,8 +1,6 @@
 import { FC } from 'react';
+import { LayoutProps } from './types';
 
-interface Props {
-  children: React.ReactNode;
-}
-export const SpaLayout: FC<Props> = () => {
+export const SpaLayout: FC<LayoutProps> = ({ routeProvider }) => {
   return <h1>Spa Layout</h1>;
 };

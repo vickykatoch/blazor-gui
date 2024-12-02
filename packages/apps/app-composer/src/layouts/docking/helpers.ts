@@ -1,4 +1,4 @@
-export const DefaultLayout1 = {
+export const DefaultLayout = {
   global: {
     tabEnableFloat: true,
     tabSetEnableMaximize: true,
@@ -14,8 +14,15 @@ export const DefaultLayout1 = {
         children: [
           {
             type: 'tab',
-            name: 'Panel 1',
-            component: 'panel',
+            id: 'ClarityDash-1',
+            name: 'Dashboard',
+            component: 'ClarityDash',
+          },
+          {
+            type: 'tab',
+            id: 'Empty-1',
+            name: 'Empty',
+            component: 'Empty',
           },
         ],
       },
@@ -25,8 +32,9 @@ export const DefaultLayout1 = {
         children: [
           {
             type: 'tab',
-            name: 'Panel 2',
-            component: 'panel',
+            id: 'AmpsView-1',
+            name: 'FX',
+            component: 'AmpsView',
           },
         ],
       },
@@ -34,7 +42,7 @@ export const DefaultLayout1 = {
   },
 };
 
-export const DefaultLayout = {
+export const DefaultLayout2 = {
   global: {
     tabEnablePopout: false,
   },
@@ -266,15 +274,15 @@ export const DefaultLayout = {
         children: [
           {
             type: 'tab',
-            id: '#7',
+            id: 'AmpsView-1',
             name: 'FX',
-            component: 'dockview',
+            component: 'AmpsView',
           },
           {
             type: 'tab',
-            id: '#8',
-            name: 'Global',
-            component: 'grid',
+            id: 'ClarityDash-1',
+            name: 'Dashboard',
+            component: 'ClarityDash',
           },
           {
             type: 'tab',
