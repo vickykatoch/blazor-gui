@@ -79,6 +79,9 @@ yarn nx g @nx/react:library --name=amps-console --directory=widgets --appProject
 
 yarn nx g @nx/js:library --name=amps-api --unitTestRunner=jest --directory=packages/libs/amps-api --importPath=@avam/amps-api --publishable=true --minimal=true --pascalCaseFiles=true --projectNameAndRootFormat=as-provided --dryRun
 
+Server:
+nx g @nx/node:application --name=money-vault --directory=server --framework=nest --frontendProject=@avam/blazor-gui --docker=true --projectNameAndRootFormat=as-provided --swcJest=true
+
 If VSCode opens different directory in integrated terminal, then set this
 
 function linkify(text) {
