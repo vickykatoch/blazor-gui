@@ -9,12 +9,12 @@ export class AppService {
     return { message: 'Hello API' };
   }
 
-  async downloadAllAssets(): Promise<void> {
-    const bal = this.dataService.getBalance();
-    console.log(bal);
+  async downloadAllAssets(): Promise<number> {
+    return this.dataService.getBalance();
+    // console.log(bal);
     // fetch('https://api.livecoinwatch.com/coins/list')
     //   .then((response) => response.json())
     //   .then((data) => {});
-    return Promise.resolve();
+    // return Promise.resolve();
   }
 }

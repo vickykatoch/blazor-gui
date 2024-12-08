@@ -16,6 +16,8 @@ export class AppController {
     try {
       debugger;
       const result = await this.appService.downloadAllAssets();
+      debugger;
+      console.log(result);
       response
         .status(200)
         .json({ message: 'All crypto assets downloaded successfully', result });

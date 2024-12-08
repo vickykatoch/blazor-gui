@@ -3,13 +3,18 @@ import { Pool } from 'pg';
 
 @Injectable()
 export class DataService {
-  private readonly pool = new Pool({});
+  private readonly pool = new Pool({
+    user: 'bkatoch',
+    host: 'ubn-bk',
+    database: 'MoneyVault',
+    password: 'Katoch@123',
+    port: 5432,
+    idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 2000,
+  });
 
   async getBalance(): Promise<number> {
     debugger;
-    const query = 'SELECT NOW()';
-    const result = await this.pool.query(query);
-    console.log(result.rows[0].now);
-    return 0;
+    return await this.pool.query('SELECT NOW()').then((res) => res.rows[0].now);
   }
 }
