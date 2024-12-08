@@ -3,15 +3,7 @@ import { Pool } from 'pg';
 
 @Injectable()
 export class DataService {
-  private readonly pool = new Pool({
-    user: 'bkatoch',
-    host: '192.168.68.148',
-    database: 'money-vault',
-    password: 'Katoch@123',
-    port: 5432,
-    idleTimeoutMillis: 30000,
-    connectionTimeoutMillis: 2000,
-  });
+  private readonly pool = new Pool({});
 
   async getBalance(): Promise<number> {
     debugger;
