@@ -12,6 +12,7 @@
   "private": true,
   "dependencies": {
     "@avam/blazor-gui": "file:",
+    "@nx/node": "17.2.8",
     "@salt-ds/core": "^1.14.0",
     "@salt-ds/icons": "^1.9.1",
     "@salt-ds/lab": "^1.0.0-alpha.28",

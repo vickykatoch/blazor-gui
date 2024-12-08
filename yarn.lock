@@ -18,7 +18,7 @@
 "@avam/blazor-gui@file:.":
   version "0.0.0"
   dependencies:
-    "@avam/blazor-gui" "file:C:/Users/vicky/AppData/Local/Yarn/Cache/v6/npm-@avam-blazor-gui-0.0.0-810dd9e0-237b-4cc8-b530-82e630d7fde4-1733095506848/node_modules/@avam/blazor-gui"
+    "@avam/blazor-gui" "file:../../Library/Caches/Yarn/v6/npm-@avam-blazor-gui-0.0.0-9294988e-cda0-4ba9-b479-1408cd085822-1733624260767/node_modules/@avam/blazor-gui"
     "@salt-ds/core" "^1.14.0"
     "@salt-ds/icons" "^1.9.1"
     "@salt-ds/lab" "^1.0.0-alpha.28"
@@ -31,9 +31,12 @@
     bootstrap "^5.3.2"
     classnames "^2.5.1"
     flexlayout-react "0.8.1"
+    moment "^2.30.1"
+    moment-timezone "^0.5.46"
     ramda "^0.29.1"
     react "18.2.0"
     react-dom "18.2.0"
+    react-moment "^1.1.3"
     react-router-dom "6.11.2"
     tslib "^2.3.0"
 
@@ -1863,6 +1866,13 @@
   dependencies:
     "@nx/js" "17.2.8"
 
+"@nrwl/node@17.2.8":
+  version "17.2.8"
+  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-17.2.8.tgz#f2cd32f92979096698c18a361a598e3a98fbf06f"
+  integrity sha512-DGwPAasjDgSrNJcB2qcCA7y02licJFCNyiGhEnIhLEUCWOyPCrAsuPmBy4/QYFoiEP6YOsIpJac/1p+9QWeJ7Q==
+  dependencies:
+    "@nx/node" "17.2.8"
+
 "@nrwl/react@17.2.8":
   version "17.2.8"
   resolved "https://registry.npmjs.org/@nrwl/react/-/react-17.2.8.tgz"
@@ -2021,6 +2031,18 @@
   integrity sha512-dwqE742TIw1+/djzlikKakIfComq8nFnhupWjvl7KrU9r8ytcKyQbxHw7KGMUT9HAEG4xSNuwiaELr/8w4MM2Q==
   dependencies:
     "@nx/eslint" "17.2.8"
+
+"@nx/node@17.2.8":
+  version "17.2.8"
+  resolved "https://registry.yarnpkg.com/@nx/node/-/node-17.2.8.tgz#57668ee77197423560971596540ba6c61295bde3"
+  integrity sha512-MxvJ2MlbpHeB5ZnlSAbSvBXAYoxCre4fsAwwCpysz1OWkf9dDGYzvlV4ovnu6jET7/ZQzzDvaKD9CvVSDk/amg==
+  dependencies:
+    "@nrwl/node" "17.2.8"
+    "@nx/devkit" "17.2.8"
+    "@nx/eslint" "17.2.8"
+    "@nx/jest" "17.2.8"
+    "@nx/js" "17.2.8"
+    tslib "^2.3.0"
 
 "@nx/nx-darwin-arm64@17.2.8":
   version "17.2.8"
@@ -8239,14 +8261,14 @@ mlly@^1.2.0, mlly@^1.4.0:
 
 moment-timezone@^0.5.46:
   version "0.5.46"
-  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.46.tgz#a21aa6392b3c6b3ed916cd5e95858a28d893704a"
+  resolved "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.46.tgz"
   integrity sha512-ZXm9b36esbe7OmdABqIWJuBBiLLwAjrN7CE+7sYdCCx82Nabt1wHDj8TVseS59QIlfFPbOoiBPm6ca9BioG4hw==
   dependencies:
     moment "^2.29.4"
 
 moment@^2.29.4, moment@^2.30.1:
   version "2.30.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.30.1.tgz#f8c91c07b7a786e30c59926df530b4eac96974ae"
+  resolved "https://registry.npmjs.org/moment/-/moment-2.30.1.tgz"
   integrity sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==
 
 mrmime@^2.0.0:
@@ -9352,7 +9374,7 @@ react-is@^18.0.0:
 
 react-moment@^1.1.3:
   version "1.1.3"
-  resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-1.1.3.tgz#829b21dfb279aa6db47ce4f1ac2555af17a1bcdc"
+  resolved "https://registry.npmjs.org/react-moment/-/react-moment-1.1.3.tgz"
   integrity sha512-8EPvlUL8u6EknPp1ISF5MQ3wx2OHJVXIP/iZc4wRh3iV3XozftZERDv9ANZeAtMlhNNQHdFoqcZHFUkBSTONfA==
 
 react-refresh@^0.14.0:
