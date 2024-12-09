@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  moneyvaultdb:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=vickykatoch
+      - POSTGRES_PASSWORD=secretpassword
+      - POSTGRES_DB=MoneyVault
+    volumes:
+      - type: bind
+        source: ./data
+        target: /home/vickykatoch/workarea/docker-play/data
+      - type: bind
+        source: ./init/init.sql
+        target: /docker-entrypoint-initdb.d/init.sql

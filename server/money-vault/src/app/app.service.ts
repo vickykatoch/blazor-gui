@@ -10,11 +10,6 @@ export class AppService {
   }
 
   async downloadAllAssets(): Promise<number> {
-    return this.dataService.getBalance();
-    // console.log(bal);
-    // fetch('https://api.livecoinwatch.com/coins/list')
-    //   .then((response) => response.json())
-    //   .then((data) => {});
-    // return Promise.resolve();
+    return this.dataService.downloadAllAssets();
   }
 }
