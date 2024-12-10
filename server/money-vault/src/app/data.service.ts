@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Pool, PoolClient } from 'pg';
-
+import { CoinsData } from './coins';
 const DATA: any[] = [
   {
     name: 'Bitcoin',
@@ -55,6 +55,59 @@ const DATA: any[] = [
       year: 2.3312,
     },
   },
+  {
+    name: 'Axion',
+    rank: 999,
+    symbol: 'X',
+    age: 1614,
+    color: '#1188d2',
+    png32:
+      'https://lcw.nyc3.cdn.digitaloceanspaces.com/production/currencies/32/axn.png',
+    png64:
+      'https://lcw.nyc3.cdn.digitaloceanspaces.com/production/currencies/64/axn.png',
+    webp32:
+      'https://lcw.nyc3.cdn.digitaloceanspaces.com/production/currencies/32/axn.webp',
+    webp64:
+      'https://lcw.nyc3.cdn.digitaloceanspaces.com/production/currencies/64/axn.webp',
+    exchanges: 3,
+    markets: 5,
+    pairs: 3,
+    categories: ['debit_cards', 'launchpad', 'nfts'],
+    allTimeHighUSD: 0.0007579587685670895,
+    circulatingSupply: 108171291671,
+    totalSupply: 367544270048,
+    maxSupply: null,
+    links: {
+      website: 'https://axion.network/',
+      whitepaper: 'https://axion.network/pdf/axion-whitepaper.pdf',
+      twitter: 'https://twitter.com/axion_network',
+      reddit: 'https://reddit.com/r/AXION',
+      telegram: 'https://t.me/axionofficial',
+      discord: 'https://discord.gg/axion',
+      medium: 'https://axionnetwork.medium.com/',
+      instagram: 'https://www.instagram.com/crypto_axion',
+      tiktok: null,
+      youtube: null,
+      linkedin: null,
+      twitch: null,
+      spotify: null,
+      naver: null,
+      wechat: null,
+      soundcloud: null,
+    },
+    code: 'AXN',
+    rate: 0.0000015785020451530458,
+    volume: 1361,
+    cap: 170748,
+    delta: {
+      hour: 0.9995,
+      day: 1.0173,
+      week: 1.0146,
+      month: 0.8505,
+      quarter: 1.3704,
+      year: 0.4631,
+    },
+  },
 ];
 
 @Injectable()
@@ -88,12 +141,14 @@ export class DataService {
     //     meta: false,
     //   }),
     // }).then((response) => response.json());
-    this.saveToDatabase(DATA);
+    // this.saveToDatabase(DATA);
+    this.saveToDatabase(CoinsData);
 
     return await this.pool.query('SELECT NOW()').then((res) => res.rows[0].now);
   }
 
   private async saveToDatabase(data: any[]): Promise<void> {
+    // debugger;
     const client = await this.pool.connect();
     try {
       await client.query('BEGIN');

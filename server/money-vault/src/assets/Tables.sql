@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS "CryptoAssets"
 (
-    code character varying(10) NOT NULL,
+    code character varying(80) NOT NULL,
     name character varying(100)  NOT NULL,
-    symbol character varying(10)  NOT NULL,
+    symbol character varying(10),
     rank integer NOT NULL,
     age integer NOT NULL,
     color character varying(7) ,
@@ -13,11 +13,11 @@ CREATE TABLE IF NOT EXISTS "CryptoAssets"
     exchanges integer,
     markets integer,
     pairs integer,
-    categories jsonb,
-    all_time_high_usd numeric(20,8),
-    circulating_supply numeric(20,8),
-    total_supply numeric(20,8),
-    max_supply numeric(20,8),
+    categories TEXT[],
+    all_time_high_usd double precision,
+    circulating_supply double precision,
+    total_supply double precision,
+    max_supply double precision,
     links jsonb,
     CONSTRAINT "CryptoAssets_pkey" PRIMARY KEY (code)
 )

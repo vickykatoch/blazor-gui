@@ -1,4 +1,4 @@
-[
+export const CoinsData : any[] =[
   {
     "name": "Bitcoin",
     "symbol": "₿",
