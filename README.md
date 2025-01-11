@@ -94,3 +94,5 @@ return text.replace(urlPattern, '<a href="$1" target="_blank" rel="noopener nore
 }
 
 yarn nx g @nx/react:library --name=clarity-dash --directory=widgets --appProject=app-composer --compiler=swc --importPath=@avam/clarity-dash --projectNameAndRootFormat=derived --dryrun
+
+yarn nx g @nx/react:library --name=log-vision --directory=widgets --appProject=app-composer --compiler=swc --importPath=@avam/log-vision --projectNameAndRootFormat=derived --dryrun

@@ -24,6 +24,7 @@
       ],
       "@avam/convenience": ["packages/libs/convenience/src/index.ts"],
       "@avam/core-types": ["packages/libs/core-types/src/index.ts"],
+      "@avam/logging-services": ["packages/libs/logging-services/src/index.ts"],
       "@avam/ui-core": ["packages/libs/ui-core/src/index.ts"]
     }
   },

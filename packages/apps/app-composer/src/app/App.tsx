@@ -1,15 +1,19 @@
-import { ReactElement } from 'react';
+import { ReactElement, useEffect } from 'react';
 import { useTheme } from '@avam/ui-core';
 import { withThemeProvider } from './withThemeProvider';
 import { Mode, SaltProvider } from '@salt-ds/core';
 import { LayoutType, useLayoutRenderer } from '../layouts';
 import { LocalRouterProvider } from '../routing/local-router';
+import { LoggingService, LogLevel } from '@avam/logging-services';
 
 const routeProvider = new LocalRouterProvider();
 
 export function App(): ReactElement {
   const { theme } = useTheme();
   const LayoutRenderer = useLayoutRenderer(LayoutType.Docking);
+  useEffect(() => {
+    LoggingService.init(LogLevel.DEBUG);
+  }, []);
 
   return (
     <SaltProvider mode={theme as Mode} applyClassesTo="root" density="medium">
