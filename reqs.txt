@@ -1,0 +1,20 @@
+•	Over 5 years of hands-on experience developing enterprise-grade applications using the Spring Framework, including Spring Boot, Spring MVC, and Spring Data, with a strong emphasis on building RESTful APIs and microservices.
+•	Over 5 years of experience in designing and developing high-performance, web-based UI applications using ReactJS, TypeScript, JavaScript, HTML, and CSS, with a strong emphasis on performance optimization and responsiveness
+•	In-depth knowledge of state management solutions including Redux and React Context API (4+ years).
+•	Proficient in ag-Grid, with 3+ years of hands-on experience using advanced features such as Server-Side Row Models, Custom Cell Renderers, Delta Updates, and Aggregation/Pivoting.
+•	Proven ability to optimize rendering performance for large datasets and handle real-time updates via WebSockets and AMPS data streams.
+•	Experienced in working with large-scale data processing in Python, including libraries such as NumPy, pandas, and Matplotlib for analytical and charting needs (3+ years).
+•	Solid understanding and over 1 year of working experience with the AMPS (Advanced Message Processing System) for real-time messaging and data streaming.
+•	Demonstrated experience in building and maintaining low-latency UI and server-side applications (2+ years).
+•	Over 2 years of experience in implementing WebSocket-based push data architectures for real-time user experiences.
+•	Strong command of Git for source control and collaborative development (3+ years).
+•	Proficient in working with containerized environments using Docker and Kubernetes (1+ year).
+•	Hands-on experience in maintaining, deploying, and supporting applications on AWS cloud infrastructure (6+ months).
+•	Familiar with Agile and Scrum methodologies, contributing to iterative development and delivery.
+•	Solid experience designing, implementing, and maintaining CI/CD pipelines using tools like Jules and Jenkins to enable automated testing, deployment, and delivery (3+ years).
+•	Sound knowledge of Fixed Income products, including Rates (e.g., U.S. Treasuries, Futures, Gilts), Swaps, Options, Credit Bonds, and ETFs (1+ year).
+
+
+We are seeking a highly experienced Full Stack Engineer to join our Fixed Income Technology team. This role is ideal for a technologist who thrives in low-latency environments and has deep expertise in both frontend and backend development. A key requirement for this position is hands-on expertise with ag-Grid — building dynamic, high-performance, data-intensive user interfaces for financial applications.
+
+You will work on designing and implementing real-time, event-driven applications for the rates and credit trading desks, leveraging technologies such as React.js, TypeScript, Java, AMPS, and WebSockets to deliver ultra-responsive trading tools.
